@@ -19,12 +19,12 @@ body, html {
 /* First image (Logo. Full height) */
 
 .logoimg {
-  /* background-image: url('/images/logo-final.jpg'); */
-  min-height: 100px;
+  background-image: url('images/logo-final-cropped.jpg');
+  min-height: 100%;
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -69,7 +69,6 @@ body, html {
 <!-- Logo Image -->
 <div class="logoimg w3-display-container" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <img src="/images/logo-final.jpg" alt="Balloon Atelier Logo">
   </div>
 </div>
 
@@ -82,8 +81,8 @@ body, html {
   </p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Ela</b></p><br>
-      <img src="/images/ela-phone-box.jpeg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+      <p><b><i class="fa fa-user w3-margin-rigEht"></i>Ela</b></p><br>
+      <img src="images/ela-phone-box.jpeg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
     </div>
 
   </div>
@@ -108,8 +107,7 @@ body, html {
   </div>
 </div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<div class="w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text w3-wide">PORTFOLIO</span>
   </div>
@@ -123,19 +121,19 @@ body, html {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="/images/teepee-pastel.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A Teepee Party">
+      <img src="images/teepee-pastel.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A Teepee Party">
     </div>
 
     <div class="w3-col m3">
-      <img src="/images/disco-decor.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Disco Glamour">
+      <img src="images/disco-decor.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Disco Glamour">
     </div>
 
     <div class="w3-col m3">
-      <img src="/images/harry-potter-arch.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A magical Harry Potter themed arch">
+      <img src="images/harry-potter-arch.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A magical Harry Potter themed arch">
     </div>
 
     <div class="w3-col m3">
-      <img src="/images/safari-84jpg.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Lush Leopard Print">
+      <img src="images/safari-84jpg.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Lush Leopard Print">
     </div>
   </div>
 
@@ -151,8 +149,8 @@ body, html {
   </div>
 </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+
+<div class="w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text w3-wide">CONTACT</span>
   </div>
@@ -203,7 +201,7 @@ body, html {
 </footer>
  
 <script>
-// Modal Image Gallery
+// Model Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
