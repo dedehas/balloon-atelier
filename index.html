@@ -40,7 +40,7 @@ body, html {
 
 </style>
 </head>
-<body>
+<body onload="logoResize()">
 
 <!-- Navbar (sit on top) -->
 <!-- <div class="w3-top">
@@ -201,6 +201,27 @@ body, html {
 </footer>
  
 <script>
+
+// animation 1
+var id = null;
+function logoResize() {
+  var elem = document.getElementById("home");
+  var scale = 100;
+  var millis = 0;
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+    millis += 10;
+    if (scale <= 50.005) {
+      clearInterval(id);
+    } else {
+      scale = 100 - 50 / (1 + Math.exp(8 - millis / 150));
+      // log(scale);
+      elem.style.minHeight = scale + '%';
+    }
+  }
+}
+
 // Model Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
