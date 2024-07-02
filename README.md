@@ -15,3 +15,4 @@
 - [ ] anyone - user-facing gallery implementation for client: folder (google drive?) where photos added and deleted from it are automatically updated in the gallery section (currently all backend), preferably captions included also
 - [ ] anyone - extension to above but for testimonials
 - [ ] extension - animate the logo and play on mouse-over
+- [ ] @fkaner0, @ItsAmyLee - FAQ
