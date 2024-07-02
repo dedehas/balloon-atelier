@@ -24,7 +24,7 @@
 
 *
 
-tussa99 - navbar: portrait and landscape, hiding options
+@ItsAmyLee - navbar: portrait and landscape, hiding options
 
 *
 
@@ -36,4 +36,20 @@ tussa99 - navbar: portrait and landscape, hiding options
 
 *
 
+@dedehas - outgoing links: nabas, Lola Roma, insta, ...
+
+*
+
+@dedehas - fill out all images and text
+
+*
+
 anyone - user-facing gallery implementation for client: folder (google drive?) where photos added and deleted from it are automatically updated in the gallery section (currently all backend), preferably captions included also
+
+*
+
+anyone - extension to above but for testimonials
+
+*
+
+extension - animate the logo and play on mouse-over
