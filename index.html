@@ -9,14 +9,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1.0">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=1.0">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=1.0">
-<link rel="manifest" href="/site.webmanifest?v=1.0">
-<link rel="mask-icon" href="/safari-pinned-tab.svg?v=1.0" color="#f5c7e7">
-<link rel="shortcut icon" href="/favicon.ico?v=1.0">
+<!-- Favicons in increasing order of preference -->
+<!-- This is automatically selected if in root (for backwards compatibility), using sizes tag to trick chromium into NOT selecting it -->
+<link rel="icon" href="/favicon.ico?v=1.2" sizes="48x48"> 
+<!-- Shortcut icons on iOS and some others -->
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=1.2">
+<!-- For Android Home Screens -->
+<link rel="manifest" href="/images/icons/site.webmanifest?v=1.2">
+<!-- For pinned tabs on Safari on MacOS -->
+<link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=1.2" color="#b3d2e6">
+<!-- Future-proof svg icon (most preferred)-->
+<link rel="icon" type="image/svg+xml" href="/images/icons/favicon.svg" sizes="any">
+<!-- For Windows Metro Tile -->
 <meta name="msapplication-TileColor" content="#603cba">
-<meta name="theme-color" content="#fde9ee">
+<meta name="msapplication-config" content="/images/icons/browserconfig.xml?v=1.2">
+<!-- Specify Chrome tab colour on Android -->
+<meta name="theme-color" content="#fde9ee" />
 
 </head>
 <body onload="logoResize()">
