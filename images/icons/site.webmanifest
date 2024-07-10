@@ -1,0 +1,19 @@
+{
+    "name": "Balloon Atelier",
+    "short_name": "Balloon Atelier",
+    "icons": [
+        {
+            "src": "/images/icons/android-chrome-192x192.png?v=1.2",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icons/android-chrome-512x512.png?v=1.2",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#fde9ee",
+    "background_color": "#fde9ee",
+    "display": "standalone"
+}
