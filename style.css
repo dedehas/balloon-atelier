@@ -25,3 +25,12 @@ body, html {
     min-height: 100px;
   }
 } */
+
+.faq-q {
+  font-weight: bold;
+  text-align: center;
+}
+
+.faq-a {
+  font-weight: initial;
+}
