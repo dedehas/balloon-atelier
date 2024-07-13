@@ -26,11 +26,17 @@ body, html {
   }
 } */
 
+.faq-item {
+  background-color: #f5c7e7;
+}
+
 .faq-q {
   font-weight: bold;
-  text-align: center;
+  /* text-align: center; */
+  
 }
 
 .faq-a {
   font-weight: initial;
+  /* background-color: #b3d2e6; */
 }
