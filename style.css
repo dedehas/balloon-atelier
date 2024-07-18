@@ -38,5 +38,6 @@ body, html {
 
 .faq-a {
   font-weight: initial;
-  /* background-color: #b3d2e6; */
+  /* background-color: #ffd8f1; */
+  margin-inline: 5%;
 }
