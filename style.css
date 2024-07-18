@@ -25,3 +25,19 @@ body, html {
     min-height: 100px;
   }
 } */
+
+.faq-item {
+  background-color: #f5c7e7;
+}
+
+.faq-q {
+  font-weight: bold;
+  /* text-align: center; */
+  
+}
+
+.faq-a {
+  font-weight: initial;
+  /* background-color: #ffd8f1; */
+  margin-inline: 5%;
+}
