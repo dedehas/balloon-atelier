@@ -15,7 +15,7 @@ class Footer extends HTMLElement {
         stylesheets.forEach(x => shadowRoot.appendChild(x.cloneNode()));
     }
 
-    fetch("footer.html")
+    fetch("components/footer.html")
       .then(response => response.text())
       .then((response) => {
         const data = response.toString();
