@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Balloon Atelier</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+<script src="footer.js" type="text/javascript" defer></script>
+
+</head>
+<body>
+
+<!-- Logo Image -->
+<div class="logoimg w3-display-container" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="faq">
+  <h2 class="w3-center">FAQ</h2>
+  
+  <div class="accordion">
+    
+    <div class="w3-center faq-item">
+      <div class="faq-q w3-button w3-block" onclick="visibilityToggle('answer1')">
+        <p>Q: What areas do you cover?</p>
+      </div>
+      <div id="answer1" class="faq-a w3-bar w3-hide">
+        <p>A: We cover mainly the SW area in London but we can travel to other parts prior to agreement. 
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-center faq-item">
+      <div class="faq-q w3-button w3-block" onclick="visibilityToggle('answer2')">
+        <p>Q: How do I pay?</p>
+      </div>
+      <div id="answer2" class="faq-a w3-bar w3-hide">
+        <p>A: By Bank Transfer into our business account. 
+              Bank details will be on the invoice. 
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-center faq-item">
+      <div class="faq-q w3-button w3-block" onclick="visibilityToggle('answer3')">
+        <p>Q: Do I need to pay a deposit?</p>
+      </div>
+      <div id="answer3" class="faq-a w3-bar w3-hide">
+        <p>A: At the time of booking a 50% non-refundable booking deposit is required and the balance payable 10 days before the date of your event. 
+              A booking is not guaranteed until a deposit is paid. 
+              For further information on this please refer to my <a href="pages/terms.html">Terms and Conditions</a>. 
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-center faq-item">
+      <div class="faq-q w3-button w3-block" onclick="visibilityToggle('answer4')">
+        <p>Q: Can you do outdoor balloon installs?</p>
+      </div>
+      <div id="answer4" class="faq-a w3-bar w3-hide">
+        <p>A: It is possible to set up balloons outdoors but latex balloons are temperamental. 
+              They do not like the heat or cold or wet conditions. 
+              Latex balloons tend to pop more when under extreme weather conditions. 
+              It is best to set up in a shaded area during the summer or a covered area during winter or a rainy day. 
+              Balloons tend to oxidise faster under the sun rays but I can help you choose the best brand and colours for outside installations. 
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-center faq-item">
+      <div class="faq-q w3-button w3-block" onclick="visibilityToggle('answer5')">
+        <p>Q: Are you insured?
+        </p>
+      </div>
+      <div id="answer5" class="faq-a w3-bar w3-hide">
+        <p>A: Yes! I am fully insured with NABAS. You can find my listing <a href="https://nabas.co.uk/directory-listing/balloon-atelier/" target="_blank">here</a>. 
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-center faq-item">
+      <div class="faq-q w3-button w3-block" onclick="visibilityToggle('answer6')">
+        <p>Q: What happens if something gets broken or a prop is not returned?</p>
+      </div>
+      <div id="answer6" class="faq-a w3-bar w3-hide">
+        <p>A: All the props and flowers used for your display will remain the property of Balloon Atelier, unless it is a specific personalised item, like an acrylic disc and you would like to keep it. 
+              If something goes missing or gets broken this item will be deducted from your hire deposit (this is different from the booking deposit) to cover the cost of replacement. 
+        </p>
+      </div>
+    </div>
+    
+    <div class="w3-center faq-item">
+      <div class="faq-q w3-button w3-block" onclick="visibilityToggle('answer7')">
+        <p>Q: Can I cancel my party?</p>
+      </div>
+      <div id="answer7" class="faq-a w3-bar w3-hide">
+        <p>A: Upon cancellation, your deposit will be lost. 
+              However, provided we have a free date for your event, this can be transferred to an alternative date. 
+        </p>
+      </div>
+    </div>
+  
+    <div class="w3-center faq-item">
+      <div class="faq-q w3-button w3-block" onclick="visibilityToggle('answer8')">
+        <p>Q: What is the lifespan of my balloon garland?</p>
+      </div>
+      <div id="answer8" class="faq-a w3-bar w3-hide">
+        <p>A: We use the best quality products so when kept inside, our air-filled garlands will last for weeks so you can enjoy them for longer. 
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-center faq-item">
+      <div class="faq-q w3-button w3-block" onclick="visibilityToggle('answer9')">
+        <p>Q: Can you arrange a balloon release?</p>
+      </div>
+      <div id="answer9" class="faq-a w3-bar w3-hide">
+        <p>A: Seeing hundreds of balloons released into the sky can be impressive, however, balloon releases are disastrous for wildlife and we cannot endorse such events. 
+              There are other alternatives that we would be happy to discuss with you. 
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer-component></footer-component>
+ 
+<script>
+  function visibilityToggle(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+
+</body>
+</html>
