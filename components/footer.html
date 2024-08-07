@@ -1,15 +1,29 @@
 <style>
-  p {
-    font-size: small;
+  hr {
+    margin: 8px;
   }
-  a.w3-bar-item i.fa {
-    font-size: x-large;
+  p, ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline;
+    list-style-type: none;
+    /* padding-right: 8px; */
+    padding-inline: 8px;
+  }
+  li+li {
+    border-left: 1px solid #ffffff
   }
 </style>
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <div class="w3-bar">
+<footer class="w3-center w3-black w3-opacity w3-hover-opacity-off">
+  <div class="w3-container">
+
+    <div class="w3-padding-16">
+      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    </div>
+
+    <div class="w3-bar w3-xlarge">
       <a class="w3-bar-item" href="https://www.facebook.com/" target="_blank">
         <i class="fa fa-facebook w3-hover-opacity"></i>
       </a>
@@ -20,6 +34,20 @@
         <i class="fa fa-google w3-hover-opacity"></i>
       </a>
     </div>
-    <p>Balloon Atelier © 2024. All rights reserved.</p>
+    
+    <hr>
+    <div class="w3-row w3-padding-16">
+      <div class="w3-half">
+        <p>© 2024 Balloon Atelier. All rights reserved.</p>
+      </div>
+      <div class="w3-half">
+        <ul>
+          <li><a href="/pages/terms.html">Terms & Conditions</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+          <li><a href="/pages/sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    
   </div>
 </footer>
