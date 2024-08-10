@@ -11,8 +11,8 @@ class Footer extends HTMLElement {
 
     // dynamically get all stylesheets from head
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
-      if (stylesheets) {
-        stylesheets.forEach(x => shadowRoot.appendChild(x.cloneNode()));
+    if (stylesheets) {
+      stylesheets.forEach(x => shadowRoot.appendChild(x.cloneNode()));
     }
 
     fetch("/components/footer.html")
