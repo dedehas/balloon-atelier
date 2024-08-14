@@ -3,8 +3,6 @@ const cardTemplate = document.createElement('template')
 class ContentCard extends HTMLElement {
   constructor() {
     super();
-    // this.attachShadow({mode: 'open'});
-    // this.shadowRoot.appendChild(cardTemplate.content.cloneNode(true))
   }
 
   connectedCallback() {
@@ -23,12 +21,9 @@ class ContentCard extends HTMLElement {
         const data = response.toString();
         cardTemplate.innerHTML = data;
         shadowRoot.appendChild(cardTemplate.content);
-        // shadowRoot.appendChild(cardTemplate.content.cloneNode(true));
       });
 
   }
 }
 
-// ? what does window do here is it necessary which one to use
-// window.customElements.define('content-card', ContentCard)
 customElements.define('content-card', ContentCard)
