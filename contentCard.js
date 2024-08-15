@@ -1,13 +1,13 @@
-const footerTemplate = document.createElement('template');
+const cardTemplate = document.createElement('template')
 
-class Footer extends HTMLElement {
+class ContentCard extends HTMLElement {
   constructor() {
-    // inherit everything
     super();
   }
 
   connectedCallback() {
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
+    // should mode be open or closed?
+    const shadowRoot = this.attachShadow({ mode: "closed" })
 
     // dynamically get all stylesheets from head
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
@@ -15,15 +15,15 @@ class Footer extends HTMLElement {
       stylesheets.forEach(x => shadowRoot.appendChild(x.cloneNode()));
     }
 
-    fetch("/components/footer.html")
+    fetch("/components/contentCard.html")
       .then(response => response.text())
       .then((response) => {
         const data = response.toString();
-        footerTemplate.innerHTML = data;
-        shadowRoot.appendChild(footerTemplate.content);
+        cardTemplate.innerHTML = data;
+        shadowRoot.appendChild(cardTemplate.content);
       });
 
   }
 }
 
-customElements.define('footer-component', Footer);
+customElements.define('content-card', ContentCard)
