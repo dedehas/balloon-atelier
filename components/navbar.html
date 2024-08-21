@@ -11,8 +11,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    justify-content: space-between;
     list-style: none;
-    margin: 1vh;
+    margin: 8px;
     padding: 0;
   }
   i.fa {
@@ -20,6 +21,21 @@
   }
   a {
     text-decoration: none;
+  }
+  a.wide {
+    display: none;
+  }
+  @media screen and (min-width: 650px) {
+    .nav-button {
+      display: none;
+    }
+    .nav-button.wide {
+      display: block;
+    }
+  }
+  button {
+    border: unset;
+    background-color: unset;
   }
 </style>
 <nav aria-label="Main">
@@ -30,25 +46,25 @@
       </a>
     </li>
     <li>
-      <a href="/index.html" class="nav-button"><i class="fa fa-home"></i>HOME</a>
+      <a href="/index.html" class="nav-button wide"><i class="fa fa-home"></i>HOME</a>
     </li>
     <li>
-      <a href="/pages/about.html" class="nav-button"><i class="fa fa-user" aria-hidden="true"></i>ABOUT</a>
+      <a href="/pages/about.html" class="nav-button wide"><i class="fa fa-user" aria-hidden="true"></i>ABOUT</a>
     </li>
     <li>
-      <a href="/pages/services.html" class="nav-button"><i class="fa fa-th-list" aria-hidden="true"></i>SERVICES</a>
+      <a href="/pages/services.html" class="nav-button wide"><i class="fa fa-th-list" aria-hidden="true"></i>SERVICES</a>
     </li>
     <li>
-      <a href="/pages/contact.html" class="nav-button"><i class="fa fa-envelope" aria-hidden="true"></i>CONTACT</a>
+      <a href="/pages/contact.html" class="nav-button wide"><i class="fa fa-envelope" aria-hidden="true"></i>CONTACT</a>
     </li>
     <li>
-      <a href="/pages/gallery.html" class="nav-button"><i class="fa fa-camera" aria-hidden="true"></i>GALLERY</a>
+      <a href="/pages/gallery.html" class="nav-button wide"><i class="fa fa-camera" aria-hidden="true"></i>GALLERY</a>
     </li>
     <li>
-      <a href="/pages/faq.html" class="nav-button"><i class="fa fa-question-circle" aria-hidden="true"></i>FAQ</a>
+      <a href="/pages/faq.html" class="nav-button wide"><i class="fa fa-question-circle" aria-hidden="true"></i>FAQ</a>
     </li>
     <li>
-      <a class="nav-button"><i class="fa fa-bars" style="margin-inline: 8px;"></i></a>
+      <button type="button" class="nav-button"><i class="fa fa-bars" style="margin-inline: 8px;" aria-hidden="true"></i></button>
     </li>
   </ul>
 </nav>
