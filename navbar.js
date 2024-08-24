@@ -1,3 +1,5 @@
+import { navbarHTML } from "./components/navbar.js";
+
 const navbarTemplate = document.createElement('template')
 
 class Navbar extends HTMLElement {
@@ -14,14 +16,20 @@ class Navbar extends HTMLElement {
       stylesheets.forEach(x => shadowRoot.appendChild(x.cloneNode()));
     }
 
-    fetch("/components/navbar.html")
-      .then(response => response.text())
-      .then((response) => {
-        const data = response.toString();
-        navbarTemplate.innerHTML = data;
-        shadowRoot.appendChild(navbarTemplate.content);
-      });
+    // Grab the component HTML
+    navbarTemplate.innerHTML = navbarHTML;
+    shadowRoot.appendChild(navbarTemplate.content);
 
+    console.log(shadowRoot.querySelector("#menu-button"));
+    
+    const button = shadowRoot.querySelector("#menu-button");
+    button.addEventListener("click", e => {
+      console.log("clicked")
+      });
+    // Attempt 4
+    shadowRoot.querySelector('button').onclick = () => {
+      console.log("YEAH!")
+    };
   }
 }
 
