@@ -64,14 +64,14 @@
     }
   }
 </style>
-<nav aria-label="Main">
+<nav id="nav" aria-label="Main">
   <a href="/index.html" class="nav-button small">
     <img src="/images/balloon-daisy-icon_clear.svg" style="height: 24px;">
   </a>
-  <button type="button" class="nav-button small" aria-expanded="false" aria-controls="nav-links"><i class="fa fa-bars" style="margin-inline: 8px;" aria-hidden="true"></i></button>
+  <button id="menu-button" type="button" class="nav-button small" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><i class="fa fa-bars" style="margin-inline: 8px;" aria-hidden="true"></i></button>
 
   <div class="wrapper">
-    <ul id="nav-links">
+    <ul role="list" id="nav-links">
       <li>
         <a href="/index.html" class="nav-button wide"><i class="fa fa-home"></i>HOME</a>
       </li>
