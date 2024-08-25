@@ -22,6 +22,7 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-top: 60px;
 }
 
 .nav-button {
