@@ -1,7 +1,22 @@
 import {LitElement, css, html} from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js';
 
 export class Navbar extends LitElement {
+
+  static properties = {
+    active: {type: Boolean, reflect: true},
+  }
+
   static styles = css`
+  :host {
+    --grid-rows: 0fr;
+    --wrapper-visibility: hidden;
+    --extra-padding: 0px;
+  }
+  :host([active]) {
+    --grid-rows: 1fr;
+    --wrapper-visibility: visible;
+    --extra-padding: 4px;
+  }
     nav {
     position: fixed;
     top: 0;
@@ -15,43 +30,37 @@ export class Navbar extends LitElement {
   }
   .wrapper {
     display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 1000ms ease-in-out;
+    grid-template-rows: var(--grid-rows);
+    visibility: var(--wrapper-visibility);
+    transition: all 1000ms ease-in-out;
   }
   ul {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 8px;
+    gap: 4px;
     justify-content: space-between;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: var(--extra-padding);
+    transition: inherit;
     position: sticky;
-    visibility: hidden;
     overflow: hidden;
-    transition: visibility 1000ms ease-in-out;
   }
   button {
     border: unset;
     background-color: unset;
     float: right;
   }
-  button:focus-within ~ .wrapper {
-    grid-template-rows: 1fr;
-  }
-  button:focus-within ~ .wrapper ul {
-    visibility: visible;
-  }
-  i.fa {
-    margin-inline-end: 8px;
-  }
   a {
     /* color: black; */
     text-decoration: none;
   }
+  .wide i{
+    margin-inline-end: 8px;
+  }
 
-  @media screen and (min-width: 650px) {
+  @media screen and (min-width: 700px) {
     .wrapper {
       grid-template-rows: 1fr;
     }
@@ -61,6 +70,7 @@ export class Navbar extends LitElement {
       visibility: visible;
     }
     .nav-button.wide {
+      margin: 0;
       display: block;
     }
     .small {
@@ -72,7 +82,16 @@ export class Navbar extends LitElement {
 
   constructor() {
     super();
+    this.active = false;  // bools must default to false
+    this.addEventListener("keyup", e => {
+      console.log(e.code);
+      if (e.code === "Escape") {this.active = false}
+    });
   }
+
+  _toggle(e) {this.active = !this.active; console.log(e)}
+
+  _icon(status) {return status? "fa-close" : "fa-bars"}
 
   render() {
     return html`
@@ -84,27 +103,27 @@ export class Navbar extends LitElement {
       <a href="/index.html" class="nav-button small">
         <img src="/images/balloon-daisy-icon_clear.svg" style="height: 24px;">
       </a>
-      <button id="menu-button" type="button" class="nav-button small" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><i class="fa fa-bars" style="margin-inline: 8px;" aria-hidden="true"></i></button>
+      <button @click="${this._toggle}" id="menu-button" type="button" class="nav-button small" aria-label="Menu" aria-expanded="${this.active}" aria-controls="nav-links"><i class="fa fa-fw fa-lg ${this._icon(this.active)}" aria-hidden="true"></i></button>
 
       <div class="wrapper">
         <ul role="list" id="nav-links">
           <li>
-            <a href="/index.html" class="nav-button wide"><i class="fa fa-home"></i>HOME</a>
+            <a href="/index.html" class="nav-button wide"><i class="fa fa-fw fa-lg fa-home"></i>HOME</a>
           </li>
           <li>
-            <a href="/pages/about.html" class="nav-button wide"><i class="fa fa-user" aria-hidden="true"></i>ABOUT</a>
+            <a href="/pages/about.html" class="nav-button wide"><i class="fa fa-fw fa-lg fa-user" aria-hidden="true"></i>ABOUT</a>
           </li>
           <li>
-            <a href="/pages/services.html" class="nav-button wide"><i class="fa fa-th-list" aria-hidden="true"></i>SERVICES</a>
+            <a href="/pages/services.html" class="nav-button wide"><i class="fa fa-fw fa-lg fa-th-list" aria-hidden="true"></i>SERVICES</a>
           </li>
           <li>
-            <a href="/pages/contact.html" class="nav-button wide"><i class="fa fa-envelope" aria-hidden="true"></i>CONTACT</a>
+            <a href="/pages/contact.html" class="nav-button wide"><i class="fa fa-fw fa-lg fa-envelope" aria-hidden="true"></i>CONTACT</a>
           </li>
           <li>
-            <a href="/pages/gallery.html" class="nav-button wide"><i class="fa fa-camera" aria-hidden="true"></i>GALLERY</a>
+            <a href="/pages/gallery.html" class="nav-button wide"><i class="fa fa-fw fa-lg fa-camera" aria-hidden="true"></i>GALLERY</a>
           </li>
           <li>
-            <a href="/pages/faq.html" class="nav-button wide"><i class="fa fa-question-circle" aria-hidden="true"></i>FAQ</a>
+            <a href="/pages/faq.html" class="nav-button wide"><i class="fa fa-fw fa-lg fa-question-circle" aria-hidden="true"></i>FAQ</a>
           </li>
         </ul>
       </div>
