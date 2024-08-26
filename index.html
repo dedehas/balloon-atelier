@@ -33,13 +33,13 @@
 </head>
 <body onload="logoResize()">
 
-<nav-bar current="index"></nav-bar>
+<header>
+  <nav-bar current="index"></nav-bar>
+  <div class="logoimg" id="home"></div>
+</header>
 
-<!-- Logo Image -->
-<div class="logoimg w3-display-container" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-  </div>
-</div>
+
+<main>
 
 <div class="w3-content w3-container w3-padding-64" id="welcome">
   <h2 class="w3-center">WELCOME TO BALLOON ATELIER!</h2>
@@ -176,6 +176,8 @@
   </div>
 </div>
 
+</main>
+
 <!-- Footer -->
 <footer-component></footer-component>
  
@@ -195,8 +197,7 @@ function logoResize() {
       clearInterval(id);
     } else {
       scale = 100 - 50 / (1 + Math.exp(8 - millis / 150));
-      // log(scale);
-      elem.style.minHeight = scale + '%';
+      elem.style.height = scale + 'vh';
     }
   }
 }
@@ -209,26 +210,6 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
-// Change style of navbar on scroll
-// window.onscroll = function() {myFunction()};
-// function myFunction() {
-//     var navbar = document.getElementById("myNavbar");
-//     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-//         navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-//     } else {
-//         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-'white'", "");
-//     }
-// }
-
-// Used to toggle the menu on small screens when clicking on the menu button
-// function toggleFunction() {
-//     var x = document.getElementById("navDemo");
-//     if (x.className.indexOf("w3-show") == -1) {
-//         x.className += " w3-show";
-//     } else {
-//         x.className = x.className.replace(" w3-show", "");
-//     }
-// }
 </script>
 
 </body>
