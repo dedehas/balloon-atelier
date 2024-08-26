@@ -54,7 +54,7 @@ export class Navbar extends LitElement {
     float: right;
   }
   a {
-    /* color: black; */
+    color: black;
     text-decoration: none;
   }
   .wide i{
