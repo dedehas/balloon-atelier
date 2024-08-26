@@ -7,203 +7,77 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  background-color: #FFE8EE;
-  line-height: 1.8;
-}
-
-
-/* First image (Logo. Full height) */
-
-.logoimg {
-  background-image: url('images/logo-final-cropped.jpg');
-  min-height: 100%;
-  background-attachment: scroll;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-/* @media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 100px;
-  }
-} */
-
-</style>
+<link rel="stylesheet" href="/style.css">
+<!-- Favicons in increasing order of preference -->
+<!-- This is automatically selected if in root (for backwards compatibility), using sizes tag to trick chromium into NOT selecting it -->
+<link rel="icon" href="/favicon.ico?v=1.2" sizes="48x48"> 
+<!-- Shortcut icons on iOS and some others -->
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png?v=1.2">
+<!-- For Android Home Screens -->
+<link rel="manifest" href="/images/icons/site.webmanifest?v=1.2">
+<!-- For pinned tabs on Safari on MacOS -->
+<link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg?v=1.2" color="#b3d2e6">
+<!-- Future-proof svg icon (most preferred)-->
+<link rel="icon" type="image/svg+xml" href="/images/icons/favicon.svg" sizes="any">
+<!-- For Windows Metro Tile -->
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="msapplication-config" content="/images/icons/browserconfig.xml?v=1.2">
+<!-- Specify Chrome tab colour on Android -->
+<meta name="theme-color" content="#fde9ee" />
+<!-- Web Components Scripts -->
+<script src="/footer.js" type="text/javascript" defer></script>
+<script src="/contentCard.js" type="text/javascript" defer></script>
+<script src="/components/navbar.js" type="module" defer></script>
 </head>
+
 <body onload="logoResize()">
 
-<!-- Navbar (sit on top) -->
-<!-- <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div> -->
+<header>
+<nav-bar current="index"></nav-bar>
+<div class="logoimg" id="home"></div>
+</header>
 
-  <!-- Navbar on small screens -->
-  <!-- <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
-</div> -->
+<main>
 
-<!-- Logo Image -->
-<div class="logoimg w3-display-container" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-  </div>
+<div id="welcome">
+  <h2>WELCOME TO BALLOON ATELIER!</h2>
 </div>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love parties!</em></p>
-  <p>
-    ..and to me nothing says "party" more than a beautiful balloon display! I have been working on my ballon displays since 2021.
+<content-card>
+  <img src="images/homepage/pink-balloon-wall.jpg" slot="card-image" alt="Ela kneels before a flowery pink balloon wall">
+  <h4 slot="card-title">Who We Are</h4>
+  <p slot="card-body">
+    At Balloon Atelier, we believe that every event deserves a touch of magic. 
+    Founded by Elizabeth Sinclair (also known to many as Ela), a passionate balloon artist with three years of experience, 
+    our mission is to create memorable experiences through stunning balloon decorations.
   </p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-rigEht"></i>Ela</b></p><br>
-      <img src="images/ela-phone-box.jpeg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
-    </div>
+</content-card>
 
-  </div>
-</div>
+<content-card>
+  <img src="images/homepage/ohbaby-ring.jpg" slot="card-image" alt="A large balloon ring surrounding a neon sign that says 'Oh Baby'">
+  <h4 slot="card-title">What We Do</h4>
+  <p slot="card-body">
+    Whether it's a birthday party, wedding, corporate event, baby shower or any special occasion, 
+    our high-quality balloons and decor will bring your vision to life. 
+    We pride ourselves on using only the finest materials and the latest techniques to ensure every piece is a work of art.
+  </p>
+</content-card>
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Partners
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    Projects Done
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Happy Clients
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Meetings
-  </div>
-</div>
+<content-card>
+  <img src="images/homepage/garden-bench.jpg" slot="card-image" alt="A garden bench surrounded by chrome balloons">
+  <h4 slot="card-title">What They Say</h4>
+  <p slot="card-body">
+    Don't just take it from me, read some of the testimonials from happy customers below!
+  </p>
+</content-card>
 
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <div class="w3-display-container w3-opacity-min">
-    <div class="w3-display-middle">
-      <span class="w3-xxlarge w3-text w3-wide">PORTFOLIO</span>
-    </div>
-  </div>
-  <br>
-
-  <p class="w3-center"><em>Here are some of my latest creations<br> Click on the images to enlarge</em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="images/teepee-pastel.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A Teepee Party">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="images/disco-decor.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Disco Glamour">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="images/harry-potter-arch.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A magical Harry Potter themed arch">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="images/safari-84jpg.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Lush Leopard Print">
-    </div>
-  </div>
-
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <div class="w3-display-container w3-opacity-min">
-    <div class="w3-display-middle">
-       <span class="w3-xxlarge w3-text w3-wide">CONTACT</span>
-    </div>
-  </div>
-  <br>
-
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <!-- <div class="w3-col m4 w3-container">
-      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
-    </div> -->
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> London, UK<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 07804690155<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <a href="mailto:info@balloonatelier.co.uk"> info@balloonatelier.co.uk </a> <br>
-      </div>
-      <!-- <p>Say hello:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form> -->
-    </div>
-  </div>
-</div>
+</main>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <a href="https://www.instagram.com/balloonatelier_/">
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-    </a>
-  </div>
-</footer>
+<footer-component></footer-component>
  
 <script>
-
-// animation 1
+// animation
 var id = null;
 function logoResize() {
   var elem = document.getElementById("home");
@@ -217,39 +91,9 @@ function logoResize() {
       clearInterval(id);
     } else {
       scale = 100 - 50 / (1 + Math.exp(8 - millis / 150));
-      // log(scale);
-      elem.style.minHeight = scale + '%';
+      elem.style.height = scale + 'vh';
     }
   }
-}
-
-// Model Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-'white'", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
 }
 </script>
 
