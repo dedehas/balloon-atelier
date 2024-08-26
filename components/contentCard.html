@@ -16,26 +16,29 @@
   }
 
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
   }
 
   img, ::slotted(img) {
     width: 100%;
+    height: inherit;
+    object-fit: cover;
     padding: 2%;
     border-radius: 15px;
+    aspect-ratio: 1 / 1;
   }
 
   .container {
     padding: 2px 16px;
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 601px) {
     div.card-image {
       width: 33%;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     div.card-image {
       width: 25%;
     }

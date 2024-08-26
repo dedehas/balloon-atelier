@@ -10,9 +10,14 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 
+<script src="/components/navbar.js" type="module" defer></script>
 <script src="/footer.js" type="text/javascript" defer></script>
+<script src="/contentCard.js" type="text/javascript" defer></script>
 
 <body>
+  <header>
+    <nav-bar current="services"></nav-bar>
+  </header>
 
 <!-- Logo Image -->
 <div class="logoimg w3-display-container" id="home">
@@ -22,6 +27,62 @@
 
 <div class="w3-content w3-container w3-padding-64" id="services">
   <h2 class="w3-center">SERVICES</h2>
+
+  <p>
+    At Balloon Atelier we believe every event is unique and deserves special attention to detail. 
+    Our custom design services go beyond balloons to ensure every aspect of your celebration is perfect.
+  </p>
+  <p>
+    We are able to offer a wide range of bespoke decorations and event services, bringing your celebration to nothing short of spectacular. 
+    Whether you're envisioning personalised acrylic discs for our welcome easels or moongates, custom decals for sailboards, 
+    or need to hire tables and chairs for children's parties, we've got you covered.
+  </p>
+  <p>
+    <em>Note on Helium Sourcing: </em>
+    Although we do not handle helium directly, we can source it and arrange for delivery to your venue.
+  </p>
+
+  <content-card>
+    <img src="/images/services/pink-balloon-wall.jpg" slot="card-image" alt="A bubbly pink balloon wall, garnished with flowers">
+    <h4 slot="card-title">Balloon Wall</h4>
+    <p slot="card-body">I can create stunning balloon walls for any event. Monochrome or a mixture of colour, and decorate with flowers, Orbz, foils and even bubbles to make it look even more splendid!</p>
+  </content-card>
+
+  <content-card>
+    <img src="/images/services/rainbow-arch.jpg" slot="card-image" alt="A six-colour rainbow arch, jumping from one white cloud to another">
+    <h4 slot="card-title">Rainbow Arch</h4>
+    <p slot="card-body">These beautiful rainbows can be created in any colour combination as well as a range of sizes so that they can be placed according to your type of event.</p>
+  </content-card>
+
+  <content-card>
+    <img src="/images/services/door-arch.jpg" slot="card-image" alt="An autumn-themed door arch creates a grandiose entrance">
+    <h4 slot="card-title">Door Arch</h4>
+    <p slot="card-body">Wow your guests from the moment they arrive with an elegant balloon door arch! This exciting customisable statement piece makes any entrance truly unforgettable.</p>
+  </content-card>
+
+  <content-card>
+    <img src="/images/services/welcome-easel.jpg" slot="card-image" alt="A flowery balloon stack coils around an easel holding up a pink cutout of a fairy castle">
+    <h4 slot="card-title">Welcome Easel</h4>
+    <p slot="card-body">I can help you create custom designs that perfectly match the theme and atmosphere of your celebration.</p>
+  </content-card>
+
+  <content-card>
+    <img src="/images/services/sailboard.jpg" slot="card-image" alt="A sailboard dotted with foil dinosaur footprints is submerged under a jungle-themed balloon stack">
+    <h4 slot="card-title">Sailboard</h4>
+    <p slot="card-body">A sailboard with top-quality balloons adds a striking centrepiece, enhances the décor, and creates a perfect photo backdrop, making your event more festive and memorable.</p>
+  </content-card>
+
+  <content-card>
+    <img src="/images/services/moongate.jpg" slot="card-image" alt="A huge ring made of orange, yellow and pink balloons of different sizes supports three hanging balloon trails">
+    <h4 slot="card-title">Moongate</h4>
+    <p slot="card-body">This is perfect for drawing attention to key areas or creating a unique backdrop, it enhances the overall atmosphere with a chic and festive vibe.</p>
+  </content-card>
+
+  <content-card>
+    <img src="/images/services/venue-decor.jpg" slot="card-image" alt="A transpoarent balloon lined with white LEDs stands above a table">
+    <h4 slot="card-title">Venue Decor</h4>
+    <p slot="card-body">Add a wow factor to any event with our unique Jellyfish balloons.  I am a registered stockist for these fantastic LED balloons which are CE certified.</p>
+  </content-card>
 
 </div>
 

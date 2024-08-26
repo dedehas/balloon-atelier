@@ -28,33 +28,12 @@
 
 <script src="/footer.js" type="text/javascript" defer></script>
 <script src="/contentCard.js" type="text/javascript" defer></script>
+<script src="/components/navbar.js" type="module" defer></script>
 
 </head>
 <body onload="logoResize()">
 
-<!-- Navbar (sit on top) -->
-<!-- <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div> -->
-
-  <!-- Navbar on small screens -->
-  <!-- <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
-</div> -->
+<nav-bar current="index"></nav-bar>
 
 <!-- Logo Image -->
 <div class="logoimg w3-display-container" id="home">
@@ -242,14 +221,14 @@ function onClick(element) {
 // }
 
 // Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
+// function toggleFunction() {
+//     var x = document.getElementById("navDemo");
+//     if (x.className.indexOf("w3-show") == -1) {
+//         x.className += " w3-show";
+//     } else {
+//         x.className = x.className.replace(" w3-show", "");
+//     }
+// }
 </script>
 
 </body>
