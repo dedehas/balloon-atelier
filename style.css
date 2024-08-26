@@ -56,6 +56,17 @@ main {
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
+.full-bar {
+  background-color: #124580;
+  text-align: center;
+}
+
+.nabas {
+  max-height: 20vh;
+  object-fit: contain;
+  aspect-ratio: 1181/576;
+}
+
 .faq-item {
   background-color: var(--color-pink);
 }
