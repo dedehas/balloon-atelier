@@ -63,7 +63,7 @@ main {
 .faq-q {
   font-weight: bold;
   /* text-align: center; */
-  
+  text-wrap: wrap;
 }
 
 .faq-a {
