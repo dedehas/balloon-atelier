@@ -95,16 +95,18 @@
 var id = null;
 function logoResize() {
   var elem = document.getElementById("home");
-  var scale = 100;
+  var final = 35;
+  var init = 95;
+  var scale = init;
   var millis = 0;
   clearInterval(id);
   id = setInterval(frame, 10);
   function frame() {
     millis += 10;
-    if (scale <= 50.005) {
+    if (scale < final) {
       clearInterval(id);
     } else {
-      scale = 100 - 50 / (1 + Math.exp(8 - millis / 150));
+      scale = init - (init - final) / (1 + Math.exp(8 - millis / 150));
       elem.style.height = scale + 'vh';
     }
   }
