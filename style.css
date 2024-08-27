@@ -4,15 +4,28 @@
   --color-barbie: #f0b2fe;
   --color-blue: #b3d2e6;
   --color-light-grey: #cccccc;
-  --color-dark-grey: #adadad;
+  --color-medium-grey: #6e6e6e;
+  --color-darkgrey: #2a2a2a;
+  
+  --color-russian-violet: #2f1847;
+  --color-dogwood-rose: #c62e65;
+  --color-yale-blue: #253c78;
+  --color-thistle: #dfcbe7;
+  --color-amethyst-smoke: #a191b7;
+  --color-lapis: #235789;
+  --color-nabas: #124580;
+  --color-caribbean-current: #216869;
+  --color-jasmine: #ffee88;
 }
 
 body, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", sans-serif;
 }
 
-h2 {
+h1, h2 {
+  color: var(--color-russian-violet);
   text-align: center;
+  text-wrap: pretty;
 }
 
 body, html {
@@ -50,14 +63,14 @@ main {
   border-radius: 8px;
 }
 .nav-button:hover {
-  background-color: var(--color-light-grey) !important;
+  color: var(--color-light-pink);
+  background-color: var(--color-russian-violet);
 }
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
-.full-bar {
-  background-color: #124580;
+.center {
   text-align: center;
 }
 
@@ -79,6 +92,5 @@ main {
 
 .faq-a {
   font-weight: initial;
-  /* background-color: #ffd8f1; */
   margin-inline: 5%;
 }
