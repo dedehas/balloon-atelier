@@ -24,9 +24,10 @@ export class Navbar extends LitElement {
     width: 100%;
     z-index: 1;
     /* overflow-y: scroll; */
-    background-color: var(--color-light-pink);
-    border-bottom: 2px solid var(--color-light-grey);
-    box-shadow: 0px 4px 16px var(--color-pink);
+    color: var(--color-russian-violet);
+    background-color: var(--color-pink);
+    /* border-bottom: 2px solid var(--color-light-grey); */
+    box-shadow: 0px -8px 24px 2px var(--color-russian-violet);
     padding: 8px;
   }
   .wrapper {
@@ -49,12 +50,14 @@ export class Navbar extends LitElement {
     overflow: hidden;
   }
   button {
+    color: inherit;
     border: unset;
     background-color: unset;
     float: right;
   }
   a {
-    color: black;
+    /* color: black; */
+    color: inherit;
     text-decoration: none;
   }
   .wide i{

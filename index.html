@@ -40,7 +40,7 @@
 <main>
 
 <div id="welcome">
-  <h2>WELCOME TO BALLOON ATELIER!</h2>
+  <h1>WELCOME TO BALLOON ATELIER!</h1>
 </div>
 
 <content-card>
@@ -73,6 +73,20 @@
 
 </main>
 
+  <div class="full-bar" style="background-color: var(--color-thistle);">
+  <h2>Ready to elevate your events with our balloon decor?</h2>
+  <p>Make an enquiry today to discuss your ideas and get a personalised quote.</p>
+  <div class="center">
+    <a class="contact-button" href="/pages/contact.html">Get in touch</a>
+  </div>
+</div>
+
+<div class="center" style="background-color: var(--color-nabas);">
+  <a href="https://nabas.co.uk/directory-listing/balloon-atelier/" target="_blank">
+    <img class="nabas" src="/images/homepage/insured-nabas-member.jpg" alt="A golden star saying Insured Nabas Member">
+  </a>
+</div>
+
 <!-- Footer -->
 <footer-component></footer-component>
  
@@ -81,16 +95,18 @@
 var id = null;
 function logoResize() {
   var elem = document.getElementById("home");
-  var scale = 100;
+  var final = 35;
+  var init = 95;
+  var scale = init;
   var millis = 0;
   clearInterval(id);
   id = setInterval(frame, 10);
   function frame() {
     millis += 10;
-    if (scale <= 50.005) {
+    if (scale < final) {
       clearInterval(id);
     } else {
-      scale = 100 - 50 / (1 + Math.exp(8 - millis / 150));
+      scale = init - (init - final) / (1 + Math.exp(8 - millis / 150));
       elem.style.height = scale + 'vh';
     }
   }
