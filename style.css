@@ -53,6 +53,28 @@ main {
   margin-right: auto;
 }
 
+.full-bar {
+  padding: 16px;
+  width: 100%;
+}
+
+.contact-button {
+  display: inline-block;
+  margin: 12px 24px;
+  padding: 8px 24px;
+  background-color: var(--color-light-pink);
+  color: var(--color-dogwood-rose);
+  text-decoration: none;
+  border-width: 2px;
+  border-radius: 8px;
+  border-color: var(--color-dogwood-rose);
+  border-style: solid;
+}
+.contact-button:hover {
+  color: var(--color-light-pink);
+  background-color: var(--color-dogwood-rose);
+}
+
 .nav-button {
   display: inline-block;
   text-align: center;
