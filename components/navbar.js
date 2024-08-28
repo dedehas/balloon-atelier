@@ -58,7 +58,6 @@ export class Navbar extends LitElement {
   a {
     /* color: black; */
     color: inherit;
-    text-decoration: none;
   }
   .wide i{
     margin-inline-end: 8px;
