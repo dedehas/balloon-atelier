@@ -7,36 +7,7 @@ export class CheckButton extends HoverButton {
     active: {type: Boolean}
   }
 
-  static styles = css` 
-  a, button {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    text-decoration: none;
-    margin: var(--hover-button-margin, 0px);
-    border: var(--hover-button-border, none);
-    padding: var(--hover-button-padding, 8px);
-    color: var(--hover-button-primary, var(--color-russian-violet));
-    background-color: var(--hover-button-secondary, transparent);
-    border-radius: var(--hover-button-radius, 8px);
-  }
-  a:hover, button:hover {
-    color: var(--hover-button-secondary, var(--color-light-pink));
-    background-color: var(--hover-button-primary, var(--color-russian-violet));
-    border-color: var(--hover-button-primary)
-  }
-  i:not(.solo) {
-    margin-right: 8px;
-  }
-  :host(.contact) {
-    --hover-button-primary: var(--color-dogwood-rose);
-    --hover-button-secondary: var(--color-light-pink);
-    --hover-button-border: 2px solid;
-    --hover-button-margin: 12px 24px;
-    --hover-button-padding: 8px 24px;
-  }
-  `;
+    static styles = super.styles;
 
   constructor() {
     super();
