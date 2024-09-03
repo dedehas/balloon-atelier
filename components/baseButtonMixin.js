@@ -7,7 +7,7 @@ export const BaseButtonMixin = (superClass) => class extends superClass {
   }
 
   static styles = css` 
-  .simple {
+  a, button {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -20,7 +20,7 @@ export const BaseButtonMixin = (superClass) => class extends superClass {
     background-color: var(--hover-button-secondary, transparent);
     border-radius: var(--hover-button-radius, 8px);
   }
-  .simple:hover {
+  a:hover, button:hover {
     color: var(--hover-button-secondary, var(--color-light-pink));
     background-color: var(--hover-button-primary, var(--color-russian-violet));
     border-color: var(--hover-button-primary)
