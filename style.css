@@ -1,21 +1,26 @@
 :root {
   --color-light-pink: #fde9ee;
   --color-pink: #f5c7e7;
-  --color-barbie: #f0b2fe;
   --color-blue: #b3d2e6;
+
   --color-light-grey: #cccccc;
   --color-medium-grey: #6e6e6e;
-  --color-darkgrey: #2a2a2a;
+  --color-dark-grey: #2a2a2a;
   
+  --color-nabas: #124580;
   --color-russian-violet: #2f1847;
   --color-dogwood-rose: #c62e65;
   --color-yale-blue: #253c78;
   --color-thistle: #dfcbe7;
+
   --color-amethyst-smoke: #a191b7;
   --color-lapis: #235789;
-  --color-nabas: #124580;
   --color-caribbean-current: #216869;
   --color-jasmine: #ffee88;
+}
+
+* {
+  box-sizing: inherit;
 }
 
 body, h1, h2, h3, h4, h5, h6 {
@@ -53,23 +58,6 @@ main {
 .full-bar {
   padding: 16px;
   width: 100%;
-}
-
-.contact-button {
-  display: inline-block;
-  margin: 12px 24px;
-  padding: 8px 24px;
-  background-color: var(--color-light-pink);
-  color: var(--color-dogwood-rose);
-  text-decoration: none;
-  border-width: 2px;
-  border-radius: 8px;
-  border-color: var(--color-dogwood-rose);
-  border-style: solid;
-}
-.contact-button:hover {
-  color: var(--color-light-pink);
-  background-color: var(--color-dogwood-rose);
 }
 
 .nav-button {

@@ -1,4 +1,6 @@
 import {LitElement, css, html, nothing} from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js';
+import { HoverButton } from '/components/hoverButton.js';
+import { CheckButton } from '/components/checkButton.js';
 
 export class Navbar extends LitElement {
 
@@ -18,15 +20,15 @@ export class Navbar extends LitElement {
     --wrapper-visibility: visible;
     --extra-padding: 4px;
   }
-    nav {
+  nav {
     position: fixed;
+    display: block;
+    box-sizing: border-box;
     top: 0;
     width: 100%;
     z-index: 1;
-    /* overflow-y: scroll; */
     color: var(--color-russian-violet);
     background-color: var(--color-pink);
-    /* border-bottom: 2px solid var(--color-light-grey); */
     box-shadow: 0px -8px 24px 2px var(--color-russian-violet);
     padding: 8px;
   }
@@ -55,14 +57,6 @@ export class Navbar extends LitElement {
     background-color: unset;
     float: right;
   }
-  a {
-    /* color: black; */
-    color: inherit;
-    text-decoration: none;
-  }
-  .wide i{
-    margin-inline-end: 8px;
-  }
 
   @media screen and (min-width: 700px) {
     .wrapper {
@@ -72,10 +66,6 @@ export class Navbar extends LitElement {
       position: sticky;
       flex-direction: row;
       visibility: visible;
-    }
-    .nav-button.wide {
-      margin: 0;
-      display: block;
     }
     .small {
       display: none;
@@ -97,39 +87,35 @@ export class Navbar extends LitElement {
 
   _icon(status) {return status? "fa-close" : "fa-bars"}
 
-  _current(name) {return (name === this.current)? "page" : ""}
+  _current(name) {return (name === this.current)}
 
   render() {
     return html`
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.css">
     <nav id="nav" aria-label="Main">
-      <a href="/index.html" class="nav-button small">
-        <img src="/images/balloon-daisy-icon_clear.svg" style="height: 24px;">
-      </a>
+      <hover-button class="small" src="/images/balloon-daisy-icon_clear.svg"></hover-button>
       <button @click="${this._toggle}" id="menu-button" type="button" class="nav-button small" aria-label="Menu" aria-expanded="${this.active}" aria-controls="nav-links"><i class="fa fa-fw fa-lg ${this._icon(this.active)}" aria-hidden="true"></i></button>
 
       <div class="wrapper">
         <ul role="list" id="nav-links">
           <li>
-            <a href="/index.html" class="nav-button wide" aria-current=${this._current("index") || nothing}><i class="fa fa-fw fa-lg fa-home"></i>HOME</a>
+            <hover-button href="/index.html" active=${this._current("index") || nothing} icon="fa-home" msg="HOME"></hover-button>
           </li>
           <li>
-            <a href="/pages/about.html" class="nav-button wide" aria-current=${this._current("about") || nothing}><i class="fa fa-fw fa-lg fa-user" aria-hidden="true"></i>ABOUT</a>
+            <hover-button href="/pages/about.html" active=${this._current("about") || nothing} icon="fa-user" msg="ABOUT"></hover-button>
           </li>
           <li>
-            <a href="/pages/services.html" class="nav-button wide" aria-current=${this._current("services") || nothing}><i class="fa fa-fw fa-lg fa-th-list" aria-hidden="true"></i>SERVICES</a>
+            <hover-button href="/pages/services.html" active=${this._current("services") || nothing} icon="fa-th-list" msg="SERVICES"></hover-button>
           </li>
           <li>
-            <a href="/pages/contact.html" class="nav-button wide" aria-current=${this._current("contact") || nothing}><i class="fa fa-fw fa-lg fa-envelope" aria-hidden="true"></i>CONTACT</a>
+            <hover-button href="/pages/contact.html" active=${this._current("contact") || nothing} icon="fa-envelope" msg="CONTACT"></hover-button>
           </li>
           <li>
-            <a href="/pages/gallery.html" class="nav-button wide" aria-current=${this._current("gallery") || nothing}><i class="fa fa-fw fa-lg fa-camera" aria-hidden="true"></i>GALLERY</a>
+            <hover-button href="/pages/gallery.html" active=${this._current("gallery") || nothing} icon="fa-camera" msg="GALLERY"></hover-button>
           </li>
           <li>
-            <a href="/pages/faq.html" class="nav-button wide" aria-current=${this._current("faq") || nothing}><i class="fa fa-fw fa-lg fa-question-circle" aria-hidden="true"></i>FAQ</a>
+            <hover-button href="/pages/faq.html" active=${this._current("faq") || nothing} icon="fa-question-circle" msg="FAQ"></hover-button>
           </li>
         </ul>
       </div>
