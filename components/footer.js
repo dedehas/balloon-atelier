@@ -3,8 +3,15 @@ import {LitElement, css, html} from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core
 export class Footer extends LitElement {
 
   static styles = css`
+  #footer-container {
+    color: var(--color-light-pink);
+    background-color: var(--color-russian-violet);
+  }
   a {
     text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.6;
   }
   hr {
     margin: 8px;
@@ -43,21 +50,21 @@ export class Footer extends LitElement {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.css">
-    <footer class="w3-center w3-dark-grey w3-hover-black">
-      <div class="w3-container w3-padding-16" id="footerContainer">
+    <footer class="w3-center">
+      <div class="w3-container w3-padding-16" id="footer-container">
 
         <div class="w3-row" id="footerTopSection" style="width: 100%; height: 180px">
 
           <div class="w3-col" id="socials" style="width: 50px; height: 100%">
             <div class="w3-bar-block w3-xlarge">
               <a class="w3-bar-item w3-container" href="https://www.facebook.com/" target="_blank">
-                <i class="fa fa-facebook w3-hover-opacity"></i>
+                <i class="fa fa-facebook"></i>
               </a>
               <a class="w3-bar-item w3-container" href="https://www.instagram.com/balloonatelier_/" target="_blank">
-                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-instagram"></i>
               </a>
               <a class="w3-bar-item w3-container" href="https://www.google.com/" target="_blank">
-                <i class="fa fa-google w3-hover-opacity"></i>
+                <i class="fa fa-google"></i>
               </a>
             </div>
           </div>
