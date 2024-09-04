@@ -1,6 +1,6 @@
 import {LitElement, css, html, nothing} from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js';
-import { HoverButton } from '/components/hoverButton.js';
-import { CheckButton } from '/components/checkButton.js';
+import '/components/hoverButton.js';
+import '/components/checkButton.js';
 
 export class Navbar extends LitElement {
 
@@ -36,7 +36,7 @@ export class Navbar extends LitElement {
     display: grid;
     grid-template-rows: var(--grid-rows);
     visibility: var(--wrapper-visibility);
-    transition: all 1000ms ease-in-out;
+    transition: all 400ms ease-in-out;
   }
   ul {
     display: flex;
@@ -51,10 +51,7 @@ export class Navbar extends LitElement {
     position: sticky;
     overflow: hidden;
   }
-  button {
-    color: inherit;
-    border: unset;
-    background-color: unset;
+  check-button {
     float: right;
   }
 
@@ -79,11 +76,17 @@ export class Navbar extends LitElement {
     this.active = false;  // bools must default to false
     this.current = this.getAttribute("current");
     this.addEventListener("keyup", e => {
-      if (e.code === "Escape") {this.active = false}
+      if (e.code === "Escape") {
+        this.active = false;
+        const checkButton = this.shadowRoot.querySelector("check-button");
+        checkButton.active = false;
+      }
+    });
+    this.addEventListener("check-button-clicked", e => {
+      this.active = !this.active;
+      e.stopPropagation();
     });
   }
-
-  _toggle(e) {this.active = !this.active}
 
   _icon(status) {return status? "fa-close" : "fa-bars"}
 
@@ -91,11 +94,11 @@ export class Navbar extends LitElement {
 
   render() {
     return html`
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.css">
     <nav id="nav" aria-label="Main">
-      <hover-button class="small" src="/images/balloon-daisy-icon_clear.svg"></hover-button>
-      <button @click="${this._toggle}" id="menu-button" type="button" class="nav-button small" aria-label="Menu" aria-expanded="${this.active}" aria-controls="nav-links"><i class="fa fa-fw fa-lg ${this._icon(this.active)}" aria-hidden="true"></i></button>
+
+      <hover-button class="small" href="/index.html" src="/images/balloon-daisy-icon_clear.svg"></hover-button>
+      <check-button class="small" icon="fa-bars" icon-checked="fa-close" aria-label="Menu" aria-controls="nav-links" aria-expanded="${this.active}"></check-button>
 
       <div class="wrapper">
         <ul role="list" id="nav-links">

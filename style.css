@@ -36,7 +36,8 @@ h1, h2 {
 body, html {
   height: 100%;
   background-color: var(--color-light-pink);
-  line-height: 1.6;
+  line-height: 1.4;
+  font-size: 15px;
 }
 
 .logoimg {
@@ -60,21 +61,6 @@ main {
   width: 100%;
 }
 
-.nav-button {
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  vertical-align: middle;
-  white-space: nowrap;
-  padding: 8px;
-  border-radius: 8px;
-}
-.nav-button:hover {
-  color: var(--color-light-pink);
-  background-color: var(--color-russian-violet);
-}
-
-.w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
 .center {

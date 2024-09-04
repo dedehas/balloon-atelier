@@ -1,4 +1,4 @@
-import {LitElement, html, nothing} from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js';
+import {LitElement, html} from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js';
 import { BaseButtonMixin } from '/components/baseButtonMixin.js';
 
 export class CheckButton extends BaseButtonMixin(LitElement) {
@@ -6,17 +6,19 @@ export class CheckButton extends BaseButtonMixin(LitElement) {
   constructor() {
     super();
     this.iconChecked = this.getAttribute("icon-checked");
-    this.addEventListener("keyup", e => {
-      if (e.code === "Escape") {this.active = false}
-    });
   }
 
   _icon(status) {return status? this.iconChecked : this.icon}
 
-  _toggle() {this.active = !this.active}
+  _clicked() {
+    this.active = !this.active;
+    const eventOptions = {bubbles: true, composed: true, detail: {status: this.active}};
+    const event = new CustomEvent("check-button-clicked", eventOptions);
+    this.dispatchEvent(event);
+  }
 
   buttonTemplate() {
-    return html`<button @click="${this._toggle}" type="button" aria-label="Menu" aria-expanded="${this.active}" aria-controls="nav-links">
+    return html`<button @click="${this._clicked}" type="button">
                   ${this.iconTemplate()}
                   ${this.msg}
                 </button>`;

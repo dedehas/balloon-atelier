@@ -12,6 +12,7 @@ export const BaseButtonMixin = (superClass) => class extends superClass {
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
+    font: inherit;
     text-decoration: none;
     margin: var(--hover-button-margin, 0px);
     border: var(--hover-button-border, none);
