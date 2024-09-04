@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
 <title>Balloon Atelier</title>
 <meta charset="UTF-8">
@@ -23,11 +23,12 @@
 <meta name="msapplication-TileColor" content="#603cba">
 <meta name="msapplication-config" content="/images/icons/browserconfig.xml?v=1.2">
 <!-- Specify Chrome tab colour on Android -->
-<meta name="theme-color" content="#fde9ee" />
+<meta name="theme-color" content="#fde9ee">
 <!-- Web Components Scripts -->
-<script src="/footer.js" type="text/javascript" defer></script>
-<script src="/contentCard.js" type="text/javascript" defer></script>
-<script src="/components/navbar.js" type="module" defer></script>
+<script src="/components/footer.js" type="module"></script>
+<script src="/components/contentCard.js" type="module"></script>
+<script src="/components/navbar.js" type="module"></script>
+<script src="/components/hoverButton.js" type="module"></script>
 </head>
 
 <body onload="logoResize()">
@@ -73,11 +74,11 @@
 
 </main>
 
-  <div class="full-bar" style="background-color: var(--color-thistle);">
+  <div class="full-bar" style="background-color: var(--color-pink);">
   <h2>Ready to elevate your events with our balloon decor?</h2>
   <p>Make an enquiry today to discuss your ideas and get a personalised quote.</p>
   <div class="center">
-    <a class="contact-button" href="/pages/contact.html">Get in touch</a>
+    <hover-button class="accent" href="/pages/contact.html" msg="Get in touch"></hover-button>
   </div>
 </div>
 
