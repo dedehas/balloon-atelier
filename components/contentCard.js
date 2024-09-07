@@ -13,10 +13,13 @@ export class ContentCard extends LitElement {
   }
 
   .card {
-    background-color: var(--color-blue);
+    display: flex;
+    flex-direction: var(--card-flex-direction, column);
+    background-color: var(--card-color, var(--color-blue));
+    border-radius: var(--card-radius, 15px);
+    margin: 16px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius: 15px;
   }
 
   .card:hover {
@@ -32,19 +35,28 @@ export class ContentCard extends LitElement {
     aspect-ratio: 1 / 1;
   }
 
-  .container {
-    padding: 2px 16px;
+  .card-image {
+    align-self: center;
+    flex: 1;
+  }
+
+  .card-text {
+    padding: var(--card-padding, 2px 16px);
   }
 
   @media screen and (min-width: 601px) {
-    div.card-image {
-      width: 33%;
+    .card {
+      flex-direction: row;
+    }
+
+    .card-text {
+      flex: 2;
     }
   }
 
   @media screen and (min-width: 769px) {
-    div.card-image {
-      width: 25%;
+    .card-text {
+      flex: 3
     }
   }
   `;
@@ -55,22 +67,22 @@ export class ContentCard extends LitElement {
 
   render() {
     return html`
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.css">
 
-    <div class="card w3-margin">
-      <div class="w3-cell-row">
+    <div class="card">
 
-        <div class="w3-cell w3-cell-middle w3-mobile card-image">
+        <div class="card-image">
           <slot name="card-image">
             <img src="/images/defualt-balloon-clipart.png" alt="">
           </slot>
         </div> 
-        <div class="w3-cell w3-mobile w3-container card-text">
+
+        <div class="card-text">
           <div class="card-title">
-            <slot name="card-title"><h4>Default Card Title</h4></slot>
+            <slot name="card-title">
+              <h4>Default Card Title</h4>
+            </slot>
           </div>
           <div class="card-body">
             <slot name="card-body">
@@ -79,7 +91,6 @@ export class ContentCard extends LitElement {
           </div>
         </div>
           
-      </div>
     </div>
     `;
   }
