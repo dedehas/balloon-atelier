@@ -29,6 +29,9 @@
 <script src="/components/contentCard.js" type="module"></script>
 <script src="/components/navbar.js" type="module"></script>
 <script src="/components/hoverButton.js" type="module"></script>
+<!-- Flickity -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js" integrity="sha512-+m9auGg9ZwnDc37W8RSsLhzKBLVOYsf5BKzSpYrYhQQk6hItXOhBFKHuHbMCpoABCUO6l4HVK+dFwxMIME3E7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css" integrity="sha512-B0mpFwHOmRf8OK4U2MBOhv9W1nbPw/i3W1nBERvMZaTWd3+j+blGbOyv3w1vJgcy3cYhzwgw1ny+TzWICN35Xg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body onload="logoResize()">
@@ -72,9 +75,27 @@
   </p>
 </content-card>
 
+<div id="testimonials" class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "wrapAround": true, 
+                                                              "autoPlay": 5000, "dragThreshold": 10, "cellSelector": ".carousel-cell" }'>
+  <div class="carousel-cell">
+    <img src="/images/homepage/testimonials/kat-drews-16th-party.jpg" alt="">
+    <!-- <div class="testimonial-text">
+      <h3>Name</h3>
+      <p>Sample tesimonial text which is quite long so it goes over a couple of lines</p>
+    </div> -->
+  </div>
+  <div class="carousel-cell">
+    <img src="/images/homepage/testimonials/neha-alice-wonderland.jpg" alt="">
+  </div>
+  <div class="carousel-cell">
+    <img src="/images/homepage/testimonials/sana-baby-shower.jpg" alt="">
+  </div>
+</div>
+
 </main>
 
-  <div class="full-bar" style="background-color: var(--color-pink);">
+
+<div class="full-bar" style="background-color: var(--color-pink);">
   <h2>Ready to elevate your events with our balloon decor?</h2>
   <p>Make an enquiry today to discuss your ideas and get a personalised quote.</p>
   <div class="center">

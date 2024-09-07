@@ -85,3 +85,56 @@ main {
   font-weight: initial;
   margin-inline: 5%;
 }
+
+#testimonials {
+  width: 100%;
+  height: 125vw;
+  max-height: 80vh;
+  margin: 50px auto;
+}
+.testimonial-text {
+  width: 100%;
+  color: var(--color-russian-violet);
+  /* height: 75%; */
+  background-color: white;
+  /* opacity: 0.6; */
+  /* position: absolute; */
+  /* pointer-events: none; */
+}
+#testimonials .carousel-cell {
+  width: 100%;
+  height: 100%;
+  max-width: fit-content;
+  margin-right: 10px;
+}
+@media screen and ( min-width: 768px ) {
+  /* // half-width cells for larger devices */
+  #testimonials { max-width: 160vh; }
+}
+.carousel-cell > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+#testimonials .flickity-button.flickity-prev-next-button {
+  background: transparent;
+  width: 100px;
+  height: 100px;
+}
+#testimonials .flickety-button-icon {
+  fill: var(--color-russian-violet);
+}
+#testimonials .flickity-page-dots {
+  bottom: 10px;
+}
+#testimonials .flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+#testimonials .flickity-page-dots .dot.is-selected {
+  background: white;
+}
