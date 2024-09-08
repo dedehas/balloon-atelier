@@ -42,6 +42,16 @@ export class ContentCard extends LitElement {
     --card-shadow-hover: none;
   }
 
+  :host(.simple) {
+    --card-background-color: transparent;
+    --card-shadow: none;
+    --card-shadow-hover: none;
+  }
+
+  :host(.swap) {
+    --card-order: 1;
+  }
+
   img, ::slotted(img) {
     width: 100%;
     height: 100%;
@@ -56,6 +66,7 @@ export class ContentCard extends LitElement {
     align-self: center;
     flex: var(--card-image-flex, 1);
     min-height: 0;
+    order: var(--card-order, 0);
   }
 
   .card-text {
