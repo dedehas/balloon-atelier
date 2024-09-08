@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
 <title>Balloon Atelier</title>
 <meta charset="UTF-8">
@@ -23,11 +23,15 @@
 <meta name="msapplication-TileColor" content="#603cba">
 <meta name="msapplication-config" content="/images/icons/browserconfig.xml?v=1.2">
 <!-- Specify Chrome tab colour on Android -->
-<meta name="theme-color" content="#fde9ee" />
+<meta name="theme-color" content="#fde9ee">
 <!-- Web Components Scripts -->
-<script src="/footer.js" type="text/javascript" defer></script>
-<script src="/contentCard.js" type="text/javascript" defer></script>
-<script src="/components/navbar.js" type="module" defer></script>
+<script src="/components/footer.js" type="module"></script>
+<script src="/components/contentCard.js" type="module"></script>
+<script src="/components/navbar.js" type="module"></script>
+<script src="/components/hoverButton.js" type="module"></script>
+<!-- Flickity -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js" integrity="sha512-+m9auGg9ZwnDc37W8RSsLhzKBLVOYsf5BKzSpYrYhQQk6hItXOhBFKHuHbMCpoABCUO6l4HVK+dFwxMIME3E7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css" integrity="sha512-B0mpFwHOmRf8OK4U2MBOhv9W1nbPw/i3W1nBERvMZaTWd3+j+blGbOyv3w1vJgcy3cYhzwgw1ny+TzWICN35Xg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body onload="logoResize()">
@@ -44,7 +48,7 @@
 </div>
 
 <content-card>
-  <img src="images/homepage/pink-balloon-wall.jpg" slot="card-image" alt="Ela kneels before a flowery pink balloon wall">
+  <img src="images/homepage/blue-balloon-display.jpg" slot="card-image" alt="Ela kneels before a flowery pink balloon wall">
   <h4 slot="card-title">Who We Are</h4>
   <p slot="card-body">
     At Balloon Atelier, we believe that every event deserves a touch of magic. 
@@ -67,17 +71,48 @@
   <img src="images/homepage/garden-bench.jpg" slot="card-image" alt="A garden bench surrounded by chrome balloons">
   <h4 slot="card-title">What They Say</h4>
   <p slot="card-body">
-    Don't just take it from me, read some of the testimonials from happy customers below!
+    Don't just take it from me, check out some of the testimonials from our happy customers below!
+    Click on the arrows or swipe to change between reviews.
   </p>
 </content-card>
 
 </main>
 
-<div class="full-bar" style="background-color: var(--color-thistle);">
+<div id="testimonials" class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "wrapAround": true, 
+                                                              "autoPlay": 5000, "dragThreshold": 10, "cellSelector": ".carousel-cell" }'>
+  <content-card class="carousel-cell">
+    <img src="/images/homepage/testimonials/kat-drews-16th-party.jpg" slot="card-image" alt="Orange, green and blue balloons hang around a doorway">
+    <h3 slot="card-title">Kat</h3>
+    <p slot="card-body">
+      Ela did a marvellous job.  She worked with ease, precision and patience and had all the tools and gadgets to deal with changes as they popped up.  
+      A very positive experience, calm energy with a beautiful balloon display that lasted just over 3 weeks!  Thank you Ela 
+    </p>
+  </content-card>
+  <content-card class="carousel-cell">
+    <img src="/images/homepage/testimonials/neha-alice-wonderland.jpg" slot="card-image" alt="A balloon arch surrounds a tea table decorated with an Alice in Wonderland theme">
+    <h3 slot="card-title">Neha</h3>
+    <p slot="card-body">
+      Ela was an absolute superstar for my daughter's first birthday.  
+      She even offered to come a day earlier to check the venue and stayed to help me set up which was such a big help and really took the stress out of it for the following day.
+      And the balloon arch itself was absolute perfection!  Every detail was stunning and she really is a perfectionist.  
+      To top it off she is just the loveliest person, I would have loved for her to stay at the party!
+      Thank you so much Ela, we look forward to decorating with you again!
+    </p>
+  </content-card>
+  <content-card class="carousel-cell">
+    <h3 slot="card-title">Sana</h3>
+    <p slot="card-body">
+      Thank you so much for dressing the Pintus space.  It was even more beautiful that I had imagined!  We had the best time in the loveliest setting.
+    </p>
+    <img src="/images/homepage/testimonials/sana-baby-shower.jpg" slot="card-image" alt="A sailboard with a cursive golden decal saying 'Byrne Baby Byrne' is surrounded by blue and beige balloons">
+  </content-card>
+</div>
+
+<div class="full-bar" style="background-color: var(--color-pink);">
   <h2>Ready to elevate your events with our balloon decor?</h2>
   <p>Make an enquiry today to discuss your ideas and get a personalised quote.</p>
   <div class="center">
-    <a class="contact-button" href="/pages/contact.html">Get in touch</a>
+    <hover-button class="accent" href="/pages/contact.html" msg="Get in touch"></hover-button>
   </div>
 </div>
 
