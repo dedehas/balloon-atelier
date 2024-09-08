@@ -92,49 +92,35 @@ main {
   max-height: 80vh;
   margin: 50px auto;
 }
-.testimonial-text {
-  width: 100%;
-  color: var(--color-russian-violet);
-  /* height: 75%; */
-  background-color: white;
-  /* opacity: 0.6; */
-  /* position: absolute; */
-  /* pointer-events: none; */
-}
 #testimonials .carousel-cell {
   width: 100%;
   height: 100%;
-  max-width: fit-content;
+  max-width: 375px;
   margin-right: 10px;
 }
 @media screen and ( min-width: 768px ) {
-  /* // half-width cells for larger devices */
-  #testimonials { max-width: 160vh; }
-}
-.carousel-cell > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  aspect-ratio: 3 / 4;
+  #testimonials { 
+    max-width: 160vh;
+   }
 }
 #testimonials .flickity-button.flickity-prev-next-button {
-  background: transparent;
-  width: 100px;
-  height: 100px;
-}
-#testimonials .flickety-button-icon {
+  background: var(--color-light-pink);
+  width: 60px;
+  height: 60px;
+  transform: translateY(-125%);
+  opacity: 0.4;
   fill: var(--color-russian-violet);
 }
 #testimonials .flickity-page-dots {
-  bottom: 10px;
+  bottom: -24px;
 }
 #testimonials .flickity-page-dots .dot {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   opacity: 1;
   background: transparent;
-  border: 2px solid white;
+  border: 2px solid var(--color-russian-violet);
 }
 #testimonials .flickity-page-dots .dot.is-selected {
-  background: white;
+  background: var(--color-russian-violet);
 }
