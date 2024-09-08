@@ -43,7 +43,7 @@ export class Navbar extends LitElement {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 4px;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
     margin: 0;
     padding: var(--extra-padding);

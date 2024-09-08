@@ -18,7 +18,7 @@ export class ContentCard extends LitElement {
     height: var(--card-height, 100%);
     background-color: var(--card-background-color, var(--color-blue));
     border-radius: var(--card-radius, 15px);
-    color: var(--card-colour, var(--color-yale-blue));
+    color: var(--card-color, var(--color-yale-blue));
     margin: var(--card-margin, 16px);
     box-shadow: var(--card-shadow, 0 4px 8px 0 rgba(0,0,0,0.2));
     transition: 0.3s;
@@ -32,20 +32,22 @@ export class ContentCard extends LitElement {
     --card-flex-direction: column;
     --card-height: 100%;
     --card-background-color: white;
-    --card-margin: 0px;
-    --card-radius: 0px;
-    --card-image-padding: 0px;
     --card-image-flex: 1 1 auto;
     --card-image-aspect-ratio: 3 / 4;
     --card-text-flex: 0 0 0;
+  }
+
+  :host(.simple) {
+    --card-radius: 0px;
+    --card-margin: 0px;
+    --card-image-padding: 0px;
     --card-shadow: none;
     --card-shadow-hover: none;
   }
 
-  :host(.simple) {
+  :host(.clear) {
+    --card-color: var(--color-russian-violet);
     --card-background-color: transparent;
-    --card-shadow: none;
-    --card-shadow-hover: none;
   }
 
   :host(.swap) {
@@ -56,13 +58,13 @@ export class ContentCard extends LitElement {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    padding: var(--card-image-padding, 2%);
     border-radius: var(--card-radius, 15px);
     aspect-ratio: var(--card-image-aspect-ratio, 1 / 1);
     min-height: 0;
   }
 
   .card-image {
+    padding: var(--card-image-padding, 2%);
     align-self: center;
     flex: var(--card-image-flex, 1);
     min-height: 0;
@@ -70,7 +72,7 @@ export class ContentCard extends LitElement {
   }
 
   .card-text {
-    padding: var(--card-padding, 2px 16px);
+    padding: var(--card-text-padding, 2px 16px);
     flex: var(--card-text-flex, initial);
   }
 
@@ -79,11 +81,17 @@ export class ContentCard extends LitElement {
       --card-flex-direction: row;
       --card-text-flex: 2;
     }
+    :host(.half) {
+      --card-image-flex: 2 1 0;
+    }
   }
 
   @media screen and (min-width: 769px) {
     :host {
       --card-text-flex: 3
+    }
+    :host(.half) {
+      --card-image-flex: 3 1 0;
     }
   }
   `;
