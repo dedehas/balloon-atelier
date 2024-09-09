@@ -79,7 +79,7 @@ export class Footer extends LitElement {
               </div>
               
               <div class="w3-rest w3-mobile" id="daisyIcon">
-                <a href="/index.html"><img src="/images/balloon-daisy-icon_clear.svg" alt="Balloon Daisy Icon"></a>
+                <a href="/index.html"><img src="/images/balloon-daisy-icon-clear.svg" alt="Balloon Daisy Icon"></a>
               </div>
 
             </div>

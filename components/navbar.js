@@ -97,7 +97,7 @@ export class Navbar extends LitElement {
     <link rel="stylesheet" href="/style.css">
     <nav id="nav" aria-label="Main">
 
-      <hover-button class="small" href="/index.html" src="/images/balloon-daisy-icon_clear.svg"></hover-button>
+      <hover-button class="small" href="/index.html" src="/images/balloon-daisy-icon-clear.svg"></hover-button>
       <check-button class="small" icon="fa-bars" icon-checked="fa-close" aria-label="Menu" aria-controls="nav-links" aria-expanded="${this.active}"></check-button>
 
       <div class="wrapper">
