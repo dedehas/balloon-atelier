@@ -1,6 +1,6 @@
 # balloon-atelier
 
-This is the repo for <www.balloonatelier.co.uk>
+This is the repo for <https://www.balloonatelier.co.uk>
 
 ## Useful links
 
