@@ -57,6 +57,7 @@ export class ContentCard extends LitElement {
   img, ::slotted(img) {
     width: 100%;
     height: 100%;
+    padding: var(--card-image-padding, 4%);
     object-fit: cover;
     border-radius: var(--card-radius, 15px);
     aspect-ratio: var(--card-image-aspect-ratio, 1 / 1);
@@ -64,7 +65,6 @@ export class ContentCard extends LitElement {
   }
 
   .card-image {
-    padding: var(--card-image-padding, 2%);
     align-self: center;
     flex: var(--card-image-flex, 1);
     min-height: 0;
