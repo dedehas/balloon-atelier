@@ -43,7 +43,7 @@ export class Navbar extends LitElement {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 4px;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
     margin: 0;
     padding: var(--extra-padding);
@@ -106,19 +106,19 @@ export class Navbar extends LitElement {
             <hover-button href="/index.html" active=${this._current("index") || nothing} icon="fa-home" msg="HOME"></hover-button>
           </li>
           <li>
-            <hover-button href="/pages/about.html" active=${this._current("about") || nothing} icon="fa-user" msg="ABOUT"></hover-button>
-          </li>
-          <li>
             <hover-button href="/pages/services.html" active=${this._current("services") || nothing} icon="fa-th-list" msg="SERVICES"></hover-button>
-          </li>
-          <li>
-            <hover-button href="/pages/contact.html" active=${this._current("contact") || nothing} icon="fa-envelope" msg="CONTACT"></hover-button>
           </li>
           <li>
             <hover-button href="/pages/gallery.html" active=${this._current("gallery") || nothing} icon="fa-camera" msg="GALLERY"></hover-button>
           </li>
           <li>
+            <hover-button href="/pages/contact.html" active=${this._current("contact") || nothing} icon="fa-envelope" msg="CONTACT"></hover-button>
+          </li>
+          <li>
             <hover-button href="/pages/faq.html" active=${this._current("faq") || nothing} icon="fa-question-circle" msg="FAQ"></hover-button>
+          </li>
+          <li>
+            <hover-button href="/pages/about.html" active=${this._current("about") || nothing} icon="fa-user" msg="ABOUT"></hover-button>
           </li>
         </ul>
       </div>
