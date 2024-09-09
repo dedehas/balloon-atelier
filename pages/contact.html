@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
 <title>Balloon Atelier</title>
 <meta charset="UTF-8">
@@ -9,27 +9,44 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/style.css">
 
-<script src="/components/navbar.js" type="module" defer></script>
-<script src="/footer.js" type="text/javascript" defer></script>
+<script src="/components/navbar.js" type="module"></script>
+<script src="/components/footer.js" type="module"></script>
+<script src="/components/contentCard.js" type="module"></script>
 
 </head>
+
 <body>
-  <header>
-    <nav-bar current="contact"></nav-bar>
-  </header>
 
-<!-- Logo Image -->
-<div class="logoimg w3-display-container" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
+<header>
+<nav-bar current="contact"></nav-bar>
+<div class="logoimg" id="home"></div>
+</header>
+
+<main>
+  
+  <div id="contact">
+    <h2>CONTACT</h2>
+    <p>
+      Contact us today to discuss your unique ideas and let us help you bring your vision to life with our comprehensive custom design services.
+    </p>
+    <!-- <p> -->
+      <!-- Please fill in the enquiry form with as much information as possible so that I can quickly start helping you plan your event. -->
+    <!-- </p> -->
+
+    <content-card>
+      <img src="/images/contact/ela-phone-box.jpeg" slot="card-image" alt="Ela standing in front of a glamorous balloon stack next to a phone box">
+      <h4 slot="card-title">Ela - Balloon Atelier</h4>
+      <p slot="card-body">
+        Tel/Whatsapp: +447804690155
+      </p>
+      <p slot="card-body">
+        Email: <a href="mailto:info@balloonatelier.co.uk">info@balloonatelier.co.uk</a>
+      </p>
+    </content-card>
   </div>
-</div>
 
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h2 class="w3-center">CONTACT</h2>
+</main>
 
-</div>
-
-<!-- Footer -->
 <footer-component></footer-component>
  
 </body>
