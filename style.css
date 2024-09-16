@@ -131,3 +131,8 @@ div.main-carousel .flickity-page-dots .dot {
 div.main-carousel .flickity-page-dots .dot.is-selected {
   background: var(--color-russian-violet);
 }
+
+iframe {
+  width: 100%;
+  height: 75vh;
+}
