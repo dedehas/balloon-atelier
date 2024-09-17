@@ -33,12 +33,12 @@
       Transform your venue with our stunning balloon arches, garlands, and centerpieces. 
       Perfect for weddings, birthdays, and corporate events.
     </p>
-    <div id="event-decor" class="main-carousel" data-flickity='{ "wrapAround": true, "freeScroll": true, "autoPlay": 5000, "dragThreshold": 10, "selectedAttraction": 0.012, "friction": 0.15 }'>
-      <img src="/images/gallery/event-decor/birthday-celebration.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/event-decor/engagement.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/event-decor/lux-baby-shower.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/event-decor/number-lights.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/event-decor/wedding.jpg" alt="" class="carousel-cell">
+    <div id="event-decor" class="main-carousel">
+      <img data-flickity-lazyload-src="/images/gallery/event-decor/birthday-celebration.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/event-decor/engagement.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/event-decor/lux-baby-shower.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/event-decor/number-lights.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/event-decor/wedding.jpg" alt="" class="carousel-cell">
     </div>
 
     <h3>Home Decor</h3>
@@ -46,14 +46,14 @@
       Bring a touch of elegance to your home celebrations with our bespoke balloon arrangements. 
       Ideal for small parties, and special moments.
     </p>
-    <div id="home-decor" class="main-carousel" data-flickity='{ "wrapAround": true, "freeScroll": true, "autoPlay": 5000, "dragThreshold": 10, "selectedAttraction": 0.012, "friction": 0.15 }'>
-      <img src="/images/gallery/home-decor/double-number-stack.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/home-decor/entrance-balloons.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/home-decor/free-standing-organic-column.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/home-decor/frozen-column.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/home-decor/number-stack.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/home-decor/special-delivery.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/home-decor/xmas-tree.jpg" alt="" class="carousel-cell">
+    <div id="home-decor" class="main-carousel">
+      <img data-flickity-lazyload-src="/images/gallery/home-decor/double-number-stack.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/home-decor/entrance-balloons.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/home-decor/free-standing-organic-column.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/home-decor/frozen-column.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/home-decor/number-stack.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/home-decor/special-delivery.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/home-decor/xmas-tree.jpg" alt="" class="carousel-cell">
     </div>
 
     <h3>Custom Designs</h3>
@@ -61,14 +61,14 @@
       Have a unique idea in mind? Let us bring it to life with our custom balloon art services. 
       We love turning your creative concepts into reality. 
     </p>
-    <div id="custom-designs" class="main-carousel" data-flickity='{ "wrapAround": true, "freeScroll": true, "autoPlay": 5000, "dragThreshold": 10, "selectedAttraction": 0.012, "friction": 0.15 }'>
-      <img src="/images/gallery/custom-designs/cherry-tree.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/custom-designs/gumball.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/custom-designs/koala-garland.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/custom-designs/mermaid-tail.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/custom-designs/mini-balloon-wall.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/custom-designs/minnie-mouse.jpg" alt="" class="carousel-cell">
-      <img src="/images/gallery/custom-designs/sweet-shop.jpg" alt="" class="carousel-cell">
+    <div id="custom-designs" class="main-carousel">
+      <img data-flickity-lazyload-src="/images/gallery/custom-designs/cherry-tree.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/custom-designs/gumball.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/custom-designs/koala-garland.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/custom-designs/mermaid-tail.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/custom-designs/mini-balloon-wall.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/custom-designs/minnie-mouse.jpg" alt="" class="carousel-cell">
+      <img data-flickity-lazyload-src="/images/gallery/custom-designs/sweet-shop.jpg" alt="" class="carousel-cell">
     </div>
     
   </div>
@@ -76,6 +76,24 @@
 </main>
 
 <footer-component></footer-component>
- 
+
+<script>
+var options = {
+  lazyLoad: 1,
+  wrapAround: true,
+  autoPlay: 10000,
+  dragThreshold: 10,
+  selectedAttraction: 0.011,
+  friction: 0.15,
+  cellSelector: ".carousel-cell"
+};
+var elem1 = document.querySelector("#event-decor");
+var flkty1 = new Flickity(elem1, options);
+var elem2 = document.querySelector("#home-decor");
+var flkty2 = new Flickity(elem2, options);
+var elem3 = document.querySelector("#custom-designs");
+var flkty3 = new Flickity(elem3, options);
+</script>
+
 </body>
 </html>

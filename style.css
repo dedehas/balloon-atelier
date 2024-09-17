@@ -94,6 +94,7 @@ div.main-carousel {
 }
 #gallery .carousel-cell {
   height: 100%;
+  min-width: 150px;
 }
 #testimonials .carousel-cell {
   width: 100%;

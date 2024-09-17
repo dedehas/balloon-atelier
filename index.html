@@ -78,7 +78,7 @@
 
 </main>
 
-<div id="testimonials" class="main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": 5000, "dragThreshold": 10, "cellSelector": ".carousel-cell" }'>
+<div id="testimonials" class="main-carousel">
   <content-card class="carousel-cell simple">
     <img src="/images/homepage/testimonials/kat-drews-16th-party.jpg" slot="card-image" alt="Orange, green and blue balloons hang around a doorway">
     <h3 slot="card-title">Kat</h3>
@@ -146,5 +146,16 @@ function logoResize() {
 }
 </script>
 
+<script>
+var options = { 
+  wrapAround: true, 
+  autoPlay: 6000, 
+  dragThreshold: 10, 
+  cellSelector: ".carousel-cell"
+};
+var elem = document.querySelector(".main-carousel");
+var flkty = new Flickity(elem, options);
+</script>
+  
 </body>
 </html>
