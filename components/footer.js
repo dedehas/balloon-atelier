@@ -56,13 +56,13 @@ export class Footer extends LitElement {
 
           <div class="w3-col" id="socials" style="width: 50px; height: 100%">
             <div class="w3-bar-block w3-xlarge">
-              <a class="w3-bar-item w3-container" href="https://www.facebook.com/" target="_blank">
+              <a class="w3-bar-item w3-container" href="https://www.facebook.com/profile.php?id=61565966591476" target="_blank">
                 <i class="fa fa-facebook"></i>
               </a>
               <a class="w3-bar-item w3-container" href="https://www.instagram.com/balloonatelier_/" target="_blank">
                 <i class="fa fa-instagram"></i>
               </a>
-              <a class="w3-bar-item w3-container" href="https://www.google.com/" target="_blank">
+              <a class="w3-bar-item w3-container" href="https://maps.app.goo.gl/ag6jZDz8nHybNxdG8" target="_blank">
                 <i class="fa fa-google"></i>
               </a>
             </div>

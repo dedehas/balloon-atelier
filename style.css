@@ -65,7 +65,7 @@ main {
   width: 100%;
 }
 
-.center {
+.center, .center p, .faq-q p {
   text-align: center;
 }
 
@@ -82,10 +82,6 @@ main {
 .faq-q {
   font-weight: bold;
   text-wrap: wrap;
-}
-
-.faq-q p {
-  text-align: center;
 }
 
 .faq-a {
