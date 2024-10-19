@@ -80,13 +80,15 @@ main {
 }
 
 .faq-q {
+  width: 100%;
   font-weight: bold;
   text-wrap: wrap;
 }
 
 .faq-a {
   font-weight: initial;
-  margin-inline: 5%;
+  padding-inline: 5%;
+  padding-block: 1px;
 }
 
 div.main-carousel {
