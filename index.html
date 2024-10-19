@@ -72,16 +72,13 @@
   <h4 slot="card-title">What They Say</h4>
   <p slot="card-body">
     Don't just take it from us, check out some of the testimonials from our happy customers below!
-    Click on the arrows or swipe to change between reviews.
   </p>
 </content-card>
 
 </main>
 
-<!-- TODO: remove images from testimonials -->
 <div id="testimonials" class="main-carousel">
   <content-card class="carousel-cell simple">
-    <img src="/images/homepage/testimonials/kat-drews-16th-party.jpg" slot="card-image" alt="Orange, green and blue balloons hang around a doorway">
     <h3 slot="card-title">Kat</h3>
     <p slot="card-body">
       Ela did a marvellous job.  She worked with ease, precision and patience and had all the tools and gadgets to deal with changes as they popped up.  
@@ -89,7 +86,6 @@
     </p>
   </content-card>
   <content-card class="carousel-cell simple">
-    <img src="/images/homepage/testimonials/neha-alice-wonderland.jpg" slot="card-image" alt="A balloon arch surrounds a tea table decorated with an Alice in Wonderland theme">
     <h3 slot="card-title">Neha</h3>
     <p slot="card-body">
       Ela was an absolute superstar for my daughter's first birthday.  
@@ -104,7 +100,15 @@
     <p slot="card-body">
       Thank you so much for dressing the Pintus space.  It was even more beautiful that I had imagined!  We had the best time in the loveliest setting.
     </p>
-    <img src="/images/homepage/testimonials/sana-baby-shower.jpg" slot="card-image" alt="A sailboard with a cursive golden decal saying 'Byrne Baby Byrne' is surrounded by blue and beige balloons">
+  </content-card>
+  <content-card class="carousel-cell simple">
+    <h3 slot="card-title">Cathy</h3>
+    <p slot="card-body">
+      Over the years Ela has become my go-to balloon artist for all my parties and functions.
+      I most recently asked her to create a surprise display for my leaving party, and she delivered beyond expectations.
+      The vibrant colours perfectly matched my outgoing personality, and I received so many wonderful comments.
+      The balloons truly reflected the happy times I've had with friends and neighbours. Absolutely fabulous!
+    </p>
   </content-card>
 </div>
 
@@ -150,7 +154,8 @@ var options = {
   wrapAround: true, 
   autoPlay: 6000, 
   dragThreshold: 10, 
-  cellSelector: ".carousel-cell"
+  cellSelector: ".carousel-cell",
+  prevNextButtons: false,
 };
 var elem = document.querySelector(".main-carousel");
 var flkty = new Flickity(elem, options);

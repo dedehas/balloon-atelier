@@ -22,6 +22,7 @@ export class ContentCard extends LitElement {
     margin: var(--card-margin, 16px);
     box-shadow: var(--card-shadow, 0 4px 8px 0 rgba(0,0,0,0.2));
     transition: 0.3s;
+    justify-content: var(--card-content-justify, initial);
   }
 
   .card:hover {
@@ -43,6 +44,8 @@ export class ContentCard extends LitElement {
     --card-image-padding: 0px;
     --card-shadow: none;
     --card-shadow-hover: none;
+    --card-image-flex: 0;
+    --card-content-justify: center;
   }
 
   :host(.clear) {
